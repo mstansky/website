@@ -1,9 +1,6 @@
 # Housekeeping
 import streamlit as st
 
-# Run in Pycharm (?)
-#python -m streamlit run your_script.py
-
 # Page Configuration --------------
 st.set_page_config(
     page_title = "MrStansky",    # visible in tab on web browser
@@ -19,7 +16,7 @@ Feel free to add me on one of my socials."""
 )
 ### Sidebar config -------------------------
 
-st.sidebar.info("Select the homepage or a project above.") # Green box on browser
+st.sidebar.info("Select the homepage or a project above.") # Blue box on browser
 
 ### Page body config -----------------------
 st.title("Welcome to Mr.Stansky 😎") # Page title
