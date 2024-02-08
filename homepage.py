@@ -19,29 +19,41 @@ Feel free to add me on one of my socials."""
 st.sidebar.info("Select the homepage or a project above.") # Blue box on browser
 
 ### Page body config -----------------------
-st.title("Welcome to Mr.Stansky 😎") # Page title
+st.title("Welcome to my website! 😎") # Page title
+
 
 # Blurb about me
 """
-My name is Mark Stansky, a finance analyst turned python programmer and data scientist via Brainstation NYC's intensive 12 week DS Bootcamp.
-
-I created this blog to showcase my capstone project, a machine learning model attempting to predict the (%) likelihood 
-of S&P 500 Stocks going bankrupt within the next year.
-
-    You can find this project in the sidebar (v1.0).
-
-Stay tuned, I will continue to improve upon the bankruptcy project in the upcoming weeks alongside some other project ideas I'm seeking to explore.
+:wave: My name is Mark Stansky, a finance analyst turned python programmer and data scientist via Brainstation NYC's intensive 12 week DS Bootcamp.
 """
+"""
+:chart: I created this website to showcase my capstone project, an interactive machine learning model that predicts the (%) likelihood 
+of S&P 500 Stocks going bankrupt within the next year.
+It also turned out to be a great way to learn and practice AWS and containerizing applications in Docker.
+To understand what went into the model's creation, I suggest you start by reading Behind the Bankruptcy Project, available in the sidebar.
+
+    You can find the writeup and interactive demo in the sidebar.
+
+
+:radio: Stay tuned and check back soon, I in addition to a bankruptcy 2.0 model I plan to finish and post some other projects I have in the works.  
+If you have feedback about my project or anything else relating to my work, please also feel free to reach out and contact me at any of my social links below.  I am am all ears.
+"""
+
+st.image('./media/bstn_demo_day_1.jpeg', caption= 'Here\'s me at demo day')
 
 # Roadmap
 st.markdown("""
+# Updates
+- Bankruptcy v1.0 writeup added (Feb '24)
+- Application containerized in Docker and Deployed on AWS (Dec '23)
+
 # Roadmap 🏍️💨
-- Expand Company Data from S&P 500 to Russell 3,000
-- Incorporate explainability -- WHY is this company likely to go bankrupt?
+- Expand Bankruptcy Analysis from S&P 500 to Russell 3,000
+- Incorporate explainability -- WHY is this company likely to go bankrupt?  What features made you decide this?
 - Incorporate Macroeconomic data -- bankruptcies happen in certain environments, can we identify them and correspondingly vulnerable companies?
 
 """)
-
+st.code('Last updated Feb 6, 2024')
 
 
 
