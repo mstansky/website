@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.image('./media/bankruptcy_header.png', caption='A selection of 2023 bankruptcy filings')
+st.image('./pages/media/bankruptcy_header.png', caption='A selection of 2023 bankruptcy filings')
 st.code('Last updated: Feb 6, 2024')
 st.header("Behind the bankruptcy project")
 ## Motivation
@@ -32,14 +32,14 @@ With that constraint, I could only acquire a complete 3-year annual financials f
 The Lopucki database originally contained 1,218 entries of large US bankruptcy cases (large defined by BS assets over \$100 MM in 1980 dollars, ~$300M in today's dollars.)
 In a future analysis, I'd like to reach back beyond the 2013 boundary to achieve a much richer dataset.
 """)
-st.image('./media/filings_by_year.jpg')
+st.image('./pages/media/filings_by_year.jpg')
 
 st.subheader('2. A slide towards insolvency')
 st.write("""
 Studying the three years of annual financials prior to a filer's bankruptcy, a visible trend towards net loss and cash outflows emerges.
 """)
 # Point #2 image
-st.image('./media/slide_towards_bankruptcy.png', caption='Aggregated annual financials of bankruptcy filers  3, 2, and 1 years prior to default.')
+st.image('./pages/media/slide_towards_bankruptcy.png', caption='Aggregated annual financials of bankruptcy filers  3, 2, and 1 years prior to default.')
 
 
 ## Clustering Analysis
@@ -51,7 +51,7 @@ My goal in trying this technique was to unearth thematic groupings in bankrupt f
 I  tried several approaches to prepare the data, employing three dimensionality reduction techniques (PCA, TSNE, and UMAP) and two scaling algorithms (minmax and standard scaling).
 The best I found was UMAP under standard scaling.  I split the data into four groups using the K-Means clustering algorithm:
 """)
-st.image('./media/UMAP_clustering.png')
+st.image('./pages/media/UMAP_clustering.png')
 
 st.write("""
 Interperting feature statistics of each cluster revealed the following general trends:
@@ -102,7 +102,7 @@ This is explained by the dataset's class-imbalance (500 S&P members vs. 89 bankr
 By simply guessing "0, not bankrupt" one will guess correctly far more often than not.  
 
 """)
-st.image('./media/bankV1_log_reg_cnf.png', caption= 'Logistic Regression Confusion Matrix')
+st.image('./pages/media/bankV1_log_reg_cnf.png', caption= 'Logistic Regression Confusion Matrix')
 
 st.write("""
 My takeaway: the linear logistic regression model is not sensitive to bankrupt cases at all.  Given the lack of predictiveness, examining model weights doesn't make sense here.
@@ -114,8 +114,8 @@ The algorithm, trained to efficiently sort bankrupt companies from healthy ones 
 Importantly, model's sensitivity to bankruptcy cases (recall score) grew from .12 to .81, clearly it can identify a bankrupt company.
 This discrepancy in sensitivity between techniques is striking, and indicates that the relationship between my supplied features and our target variable (bankruptcy) is complex relationship a linear function will struggle to describe.
 """)
-st.image(['./media/bankV1_DT_tree.png',
-          './media/DT_conf_matrix.png'],
+st.image(['./pages/media/bankV1_DT_tree.png',
+          './pages/media/DT_conf_matrix.png'],
          caption= ['Plotted Bankruptcy Decision Tree',
                    'Decision Tree confusion Matrix'],
          )
@@ -148,9 +148,9 @@ I performed a grid search to test for the appropraite depth that would precisely
 
 st.write("**The first three 'trees' in my Random Forest:**")
 
-st.image(['./media/RF_tree_1.png',
-          './media/RF_tree_2.png',
-          './media/RF_tree_3.png']
+st.image(['./pages/media/RF_tree_1.png',
+          './pages/media/RF_tree_2.png',
+          './pages/media/RF_tree_3.png']
          , width = 300
          )
 st.write("""
@@ -161,7 +161,7 @@ It would be an interesting further analysis to examine the misclassified bankrup
 Since bankruptcy can occur in unexpected ways, it's possible that some of these cases were not driven by the company's financial fundamentals.  
 (Note: in creating the RF model I changed the randomstate parameter during train test split which resulted in the new test pool having 20 bankrupt cases to test against vs the previous 18.)
 """)
-st.image('./media/RF_conf_matrix.png')
+st.image('./pages/media/RF_conf_matrix.png')
 
 st.write("""
 **Feature Importances**  
@@ -173,7 +173,7 @@ If I were to run this analysis again, perhaps I would remove the immediate year 
 I do, though, find it notable that some alternative comparisons I included, for example Financiang Cash Flow to Revenue and 3Y-prior Cash to Revenue were among the top 10 metrics.
 With further analysis, these ratios may be good indicators of specific bankruptcy scenarios.  
 """)
-st.image('./media/bankV1_RF_feature_importance.png')
+st.image('./pages/media/bankV1_RF_feature_importance.png')
 
 
 

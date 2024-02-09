@@ -3,7 +3,7 @@ import streamlit as st
 
 # Page Configuration --------------
 st.set_page_config(
-    page_title = "MrStansky",    # visible in tab on web browser
+    page_title = "stansky.org",    # visible in tab on web browser
     page_icon = "✅",            # visible in tab on web browser
     layout="wide",
     initial_sidebar_state="expanded",
@@ -19,12 +19,12 @@ Feel free to add me on one of my socials."""
 st.sidebar.info("Select the homepage or a project above.") # Blue box on browser
 
 ### Page body config -----------------------
-st.title("Welcome to my website! 😎") # Page title
+st.title("Welcome to my website!") # Page title  😎
 
 
 # Blurb about me
 """
-:wave: My name is Mark Stansky, a finance analyst turned python programmer and data scientist via Brainstation NYC's intensive 12 week DS Bootcamp.
+:wave: My name is Mark Stansky, a finance analyst turned python programmer and aspiring data scientist via Brainstation NYC's intensive 12 week DS Bootcamp.
 """
 """
 :chart: I created this website to showcase my capstone project, an interactive machine learning model that predicts the (%) likelihood 
@@ -39,7 +39,7 @@ To understand what went into the model's creation, I suggest you start by readin
 If you have feedback about my project or anything else relating to my work, please also feel free to reach out and contact me at any of my social links below.  I am am all ears.
 """
 
-st.image('./media/bstn_demo_day_1.jpeg', caption= 'Here\'s me at demo day')
+st.image('./pages/media/bstn_demo_day_1.jpeg', caption= 'Here\'s me at demo day')
 
 # Roadmap
 st.markdown("""
