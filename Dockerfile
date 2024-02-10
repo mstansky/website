@@ -24,7 +24,7 @@ COPY homepage.py /home/app
 COPY pages /home/app/pages
 
 # ---- install any dependencies
-RUN pip install streamlit numpy pandas joblib scikit-learn
+RUN pip install streamlit numpy pandas joblib sklearn==1.3.2
 
 
 
