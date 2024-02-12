@@ -54,7 +54,7 @@ input_data = input_data.to_numpy()
 input_data = np.delete(input_data, [0, 1, 2])  # drop first 3 items
 
 # 4. run input data through pickle
-loaded_model.predict_proba(input_data.reshape(1, -1))
+loaded_model.predict_proba(input_data.values.reshape(1, -1)) #TEST FEB12 added .values
 
 # 5. return prediction
 prediction = loaded_model.predict(input_data[None,])
