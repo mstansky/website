@@ -8,7 +8,7 @@ import joblib
 st.title("Financial Forecasting: Predicting the odds of bankruptcy in the S&P 500")
 st.write("""
 As discussed at-length in Behind the Bankruptcy Project, this is the interactive demo allowing you to explore my machine learning model predicting the individual % chance a S&P 500 member will go bankrupt in the next year.
-This model, trained to identify a bankrupt copmany from a healthy one, ingests a S&P 500 member's financials, and based on what it learned from bankruptcies in the past decade, determines a % odds that it will go bankrupt within the next year.
+This model, trained to identify a bankrupt company from a healthy one, ingests a S&P 500 member's financials, and based on what it learned from bankruptcies in the past decade, determines a % odds that it will go bankrupt within the next year.
 """)
 
 ########################################################################################################################################################
