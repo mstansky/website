@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /homepage
+Disallow: /Behind_The_Bankruptcy_Project
+Disallow: /Interactive_Bankruptcy_Odds_App
+Disallow: /
+
+User-agent: Googlebot
+Disallow: /
+
+User-agent: Bingbot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: GPTBot
+Disallow: /
+
+User-Agent: omgili
+Disallow: /
+
+User-Agent: omgilibot
+Disallow: /

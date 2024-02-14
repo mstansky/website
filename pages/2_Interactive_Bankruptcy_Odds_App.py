@@ -4,7 +4,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 
-
+st.set_page_config(page_icon='✅')
 st.title("Financial Forecasting: Predicting the odds of bankruptcy in the S&P 500")
 st.write("""
 As discussed at-length in Behind the Bankruptcy Project, this is the interactive demo allowing you to explore my machine learning model predicting the individual % chance a S&P 500 member will go bankrupt in the next year.
@@ -54,7 +54,7 @@ input_data = input_data.to_numpy()
 input_data = np.delete(input_data, [0, 1, 2])  # drop first 3 items
 
 # 4. run input data through pickle
-loaded_model.predict_proba(input_data.values.reshape(1, -1)) #TEST FEB12 added .values
+loaded_model.predict_proba(input_data.reshape(1, -1))
 
 # 5. return prediction
 prediction = loaded_model.predict(input_data[None,])

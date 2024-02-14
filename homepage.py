@@ -10,7 +10,7 @@ st.set_page_config(
     menu_items={
         'Get Help': None, # Should I add anything?
         'Report a bug': None, # Should I add an email me dialogue? or a Contact Me?
-        'About': """# Thanks for visiting my website! 
+        'About': """# Thanks for stansky.org 
 Feel free to add me on one of my socials."""
     }
 )

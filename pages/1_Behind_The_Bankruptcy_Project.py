@@ -1,8 +1,9 @@
 import streamlit as st
+st.set_page_config(page_icon='✅')
 
 st.image('./pages/media/bankruptcy_header.png', caption='A selection of 2023 bankruptcy filings')
 st.code('Last updated: Feb 6, 2024')
-st.header("Behind the bankruptcy project")
+st.header("Behind the Bankruptcy Project")
 ## Motivation
 st.write("""
 I chose corporate bankruptcy as the topic of my capstone project because it combines a lot of my [background](https://www.linkedin.com/in/markstansky/).  Fundamental credit and equity analysis requires an analyst to understand a company’s effectiveness in sourcing income (revenues) and efficiency at producing cash flows, today as well as into the future.
